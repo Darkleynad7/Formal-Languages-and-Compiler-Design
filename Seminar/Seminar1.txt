@@ -1,0 +1,67 @@
+Program languages specification
+
+	1. BNF(Backus-Naur Form)
+
+		Language Features
+
+		a.) meta-linguistic variables(non-terminals)
+			- written between <>
+
+		b.) language primitives (terminals)
+			- written between delimiters
+
+		c.) meta-linguistic connectors
+			::= (by definition/equals)
+			 |  (or/alternative)
+
+
+
+		<construct> ::= expr1|expr2|...|exprn
+
+		ex1. BNF def. for all non-empty seq. of letters:
+
+			<let_seq> ::= <letter>|<letter><lett_seq>
+			<letter> ::= a|b|c|...|z|A|B|C|...|Z
+
+		ex2. BNF def. for integers(both signed and unsigned) with 2 constraints
+			- 0 is unsigned
+			- intgers of 2+ digits should not start with 0
+
+			<integer> ::= 0|<sign><number>|<number>
+			<number> ::= <non_zero_digit>|<non_zero_digit><rest_of_number>
+			<rest_of_number> ::= <digit>|<digit><rest_of_number>
+			<sign> ::= +|-
+			<non_zero_digit> ::= 1|2|...|9
+			<digit> ::= 0|1|2|...|9
+
+	2. EBNF(Extended BNF)
+
+		Wirth's dialect
+
+		a.) {} - repetition 0 or more
+
+		b.) [] - optionality (0 or 1)
+
+		c.) () - grouping
+
+		d.) nonterminals lose <>
+
+		e.) terminals written between ""
+
+		f.) ::= -> =
+
+		g.) (**) - comments
+
+		ex2 again:
+
+			integer = "0" | ["+"|"-"] non_zero_digit {digit}
+			digit = "0" | non_zero_digit
+			non_zero_digit = "1" | "2" | "3" | ... | "9"
+
+		https://www.cs.ubbcluj.ro/~vladi/FLCD-SpecExample
+			
+
+
+
+
+

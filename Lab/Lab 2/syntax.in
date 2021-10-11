@@ -1,0 +1,25 @@
+SYNTAX.IN
+
+program = "{" {[declaration] | [statement]} "}"
+
+declaration = "assign" type {identifier}
+type = vartype | arraydec
+vartype = "int" | "float" | "char" | "string"
+arraydec = "Array<" vartype ">"
+
+statement = simpleStatemnent | complexStatement
+
+simpleStatement = assignStatement | IOStatement
+assignStatement = IDENTIFIER "=" expression
+expression = expression OPERAND term | term
+term = "(" expression ")" | IDENTIFIER
+OPERAND = "+" | "-" | "*" | "/" | "%" | "^"
+IOStatement = ("consoleRead" | "consoleWrite") "(" IDENTIFIER ")"
+
+complexStatement = statement | ifStatement | iterateStatement
+ifStatement = "if(" condition ")do" statement {"elif(" condition ")do" statement} ["else" statement]
+iterateStatement = "iterate" IDENTIFIER "in" container "do" statement
+container = "range(" NUMERICAL_CONST "," NUMERICAL_CONST ")" | ARRAYVAR
+NUMERICAL_CONST = ["+" | "-"] DIGIT{DIGIT}
+condition = expression LOGICAL_OPERATOR (expression | condition)
+LOGICAL_OPERATOR = "==" | "!=" | "<" | "<=" | ">=" | ">" | "and" | "or"

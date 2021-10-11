@@ -1,0 +1,28 @@
+Compute the solutions for a 2nd order equation
+(ax^2 + bx + c)
+
+{
+	assign int a, b, c
+	assign float delta
+
+	consoleRead("a=", a)
+	consoleRead("b=", b)
+	consoleRead("c=", c)
+
+	delta = b ^ 2 - 4 * a * c
+
+	if (delta $ 0) do
+		assign float x1, x2;
+		x1 = (b * (-1) + root(delta, 2))/(2 * a)
+		x2 = (b * (-1) - root(delta, 2))/(2 * a)
+		consoleWrite("TheTwoSolutionsAre" + x1 + "And" + x2)
+
+	elif (delta == 0) do
+		assign float x;
+		x = b * (-1) / (2 * a)
+		consoleWrite("TheSolutionIsx1,2=" + x)
+
+	else
+		consoleWrite("TheEquationHas      NoRealSolution")
+
+}

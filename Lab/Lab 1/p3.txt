@@ -1,0 +1,22 @@
+Compute the mean of n numbers
+
+{
+	assign int n
+	assign float mean
+	assign Array<int> numbers
+
+	consoleRead("n=", n)
+
+	assign int i
+	iterate i in range(0, n) do
+		consoleRead(numbers[i])
+
+	assign int sum;
+	sum = 0;
+	iterate i in numbers, do
+		sum += i
+
+
+	mean = sum / n
+	consoleWrite("TheMeanOfTheNumbers=" + mean)
+}

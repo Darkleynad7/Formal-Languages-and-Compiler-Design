@@ -1,0 +1,53 @@
+LEXIC.TXT
+
+
+I. Alphabet
+
+	a. Upper (A-Z) and lower case (a-z) letters of the English alphabet
+	b. Underline character (_)
+	c. Digits in base 10 (0 - 9)
+
+II. Lexic
+
+	a. Special symbols:
+
+		- operators: =, ==, !=, <, <=, >=, >, +, -, *, /, %, ^
+
+		- separators: {}, (), <>, space, ,
+
+		- reserved words: assign, int, float, bool, char, string, Array, if, elif, else, do, iterate, in, and, or
+
+	b. identifieres:
+
+		- a sequence of letters and digits, first character has to be a digit:
+
+			identifier = letter | letter {letter | digit | "_"}
+			letter = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+			digit = "0" | "1" | ... | "9"
+
+	c. constants:
+
+		- integers rule:
+
+			int = ["+" | "-"] no | no
+			no = digit{no}
+
+		- float rule:
+		 	float = ["+" | "-"] fl | fl
+		 	fl = no "," no
+
+		- boolean rule:
+			boolean = "true" | "false"
+
+		- characther rule:
+
+			charS = 'letter' | 'digit'
+
+		- string rule:
+
+			string = "str"
+			str = char{str}
+			char = letter | digit
+
+
+

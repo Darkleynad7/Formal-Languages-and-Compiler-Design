@@ -1,0 +1,5 @@
+1. All number made of the digits 1 and 2
+2. It is not a correct representation, beacuse it includes numbers that start with 0
+3. 9 tokens
+4. The output of scanning are the PIF table, the ST table and lexical errors
+5. We do not introduce a lexical error by missing a letter in keyword, the program will scan it as a different token and then we will get a compiler error
