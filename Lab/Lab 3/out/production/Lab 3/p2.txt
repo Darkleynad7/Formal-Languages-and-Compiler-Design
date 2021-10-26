@@ -1,0 +1,18 @@
+{
+	assign int a, b, c, min
+
+	consoleRead("a=", a)
+	consoleRead("b=", b)
+	consoleRead("c=", c)
+
+	if (a <= b) do
+		min = a
+	else
+		min = b
+
+	if (c < min) do
+		min = c
+
+	consoleWrite("TheMinimumOfThe3NumbersIs" + min)
+
+}
