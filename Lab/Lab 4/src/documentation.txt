@@ -1,0 +1,20 @@
+Link to github repo: https://github.com/Darkleynad7/Formal-Languages-and-Compiler-Design
+
+    1. HashNode:
+        - contains information about a node in the hash table: key, value, hashcode and a reference to the next node
+
+    2. SymbolTable:
+        - a class that contains a list of nodes with its size and capacity.
+        - performs basic operations like adding a key-value pair and searching a value by its key.
+        - the hashcode function is overridden by a new hashcode function which hashes the elements by the sum of
+        the ASCII codes of their characters.
+
+    3. LexicalAnalyzer:
+        a.) Method prelucrateFile():
+            - reads the file for the program and adds spaces between each separator/operator/reservedWord/variable/constant and returns
+           the result as a string
+
+        b.) Method run():
+            - the core lexical analyzer.
+            - reads the string line by line, splits the line into tokens and then analyzes every token, putting them in PIF and ST.
+            - stops when a lexical error occurs and prints the line and the token
