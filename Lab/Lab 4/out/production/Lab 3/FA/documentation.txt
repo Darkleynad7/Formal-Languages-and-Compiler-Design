@@ -1,0 +1,10 @@
+Transition:
+    - contains the next state and the rule
+    - return the next state if the input matches the rule
+
+State:
+    - contains the name of the state, all transition starting form the state and if it is final or not
+    - searches through all the transitions and returns the state that matches the input
+
+FiniteAutomataRead:
+    - reads the finite automata from a file and stores all the states and their transitions
